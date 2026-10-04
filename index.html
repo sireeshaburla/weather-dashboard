@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">Asynchronous JavaScript & RESTful APIs</p>
+      <h1>Live Weather Dashboard</h1>
+      <p class="subtitle">Search for a city and view live weather data using a public REST API.</p>
+    </header>
+
+    <section class="search-box">
+      <input id="cityInput" type="text" placeholder="Enter city name..." autocomplete="off">
+      <button id="searchBtn">Search Weather</button>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="weatherCard" class="weather-card hidden">
+      <div class="location">
+        <div>
+          <p class="label">Current Weather</p>
+          <h2 id="cityName">--</h2>
+          <p id="weatherDescription">--</p>
+        </div>
+        <div class="temperature">
+          <span id="temperature">--</span>°C
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span>💧</span>
+          <strong id="humidity">--</strong>
+          <small>Humidity</small>
+        </div>
+        <div class="metric">
+          <span>💨</span>
+          <strong id="windSpeed">--</strong>
+          <small>Wind Speed</small>
+        </div>
+        <div class="metric">
+          <span>🌡️</span>
+          <strong id="feelsLike">--</strong>
+          <small>Feels Like</small>
+        </div>
+        <div class="metric">
+          <span>📍</span>
+          <strong id="coordinates">--</strong>
+          <small>Coordinates</small>
+        </div>
+      </div>
+
+      <details class="json-panel">
+        <summary>View parsed JSON data</summary>
+        <pre id="jsonOutput"></pre>
+      </details>
+    </section>
+
+    <section id="welcome" class="welcome">
+      <div class="icon">☀️</div>
+      <h2>Search for a city</h2>
+      <p>Enter a city name above to retrieve live weather metrics.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
